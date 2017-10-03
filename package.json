@@ -1,0 +1,22 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "This is a useless testbot for discord",
+  "main": "start.js",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "ffmpeg-binaries": "^3.2.2",
+    "mongodb": "^2.2.31",
+    "mysql": "^2.14.1",
+    "node-opus": "^0.2.7",
+    "opusscript": "0.0.3",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Groenewold",
+  "license": "ISC"
+}
