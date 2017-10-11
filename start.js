@@ -3,6 +3,8 @@
 var Discord = require('discord.js');
 var request = require("request");
 var config = require('./config.json');
+var mysql = require('mysql');
+var nedb = require('nedb');
 
 //setup client and other scripts
 var client = new Discord.Client();
@@ -13,7 +15,6 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
-var mysql = require('mysql');
 var fullMessage;
 var base = "offline";
 var con = mysql.createConnection({
@@ -152,6 +153,7 @@ client.on('message', message => {
 
             case"/nasi":
                 message.reply('https://www.okokorecepten.nl/recept/rijst/nasi/');
+                console.log('nasi has been send');
             break;
 
             case "/cat":
@@ -161,10 +163,19 @@ client.on('message', message => {
                     }, function (error, response, body) {
                         if (!error && response.statusCode === 200) {
                             var image = JSON.parse(body);
+                            console.log('Cat has been send');
                             message.channel.send(image);
-
+                            console.log('Cat has been succesfully delivered');
                         }
                     })
+            break;
+
+            case "/bot":
+                    message.reply('https://github.com/Errox/discord_playground');
+            break;
+
+            case "/gay":
+                message.channel.send('https://www.youtube.com/watch?v=0VG1bj4Lj1Q');
             break;
 
             default:
