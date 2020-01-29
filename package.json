@@ -5,7 +5,7 @@
   "main": "start.js",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "ffmpeg-binaries": "^3.2.2",
+    "ffmpeg-binaries": "^4.0.0",
     "mongodb": "^2.2.31",
     "mysql": "^2.14.1",
     "node-opus": "^0.2.7",
